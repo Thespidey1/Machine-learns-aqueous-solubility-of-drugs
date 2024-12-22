@@ -1,0 +1,43 @@
+epochs: 100
+gpu: cuda:0
+lr_decay_patience: 7
+early_stop_patience: 15
+lr_decay_factor: 0.3
+split by: index
+seed: 1
+k : 5
+model_type : tf
+
+
+#batch_size: 128
+#init_lr: 0.003
+#min_lr :  0.001
+
+
+
+batch_size: 64
+init_lr: 0.0003
+min_lr :  0.0001
+weight_decay : 0
+
+DA : False
+Freeze : False
+Load pretrained model : False
+
+transformer:
+  ntoken: 1502
+  d_model: 256
+  nhead: 4
+  d_hid: 512
+  nlayers: 4
+  dropout: 0
+
+
+gnn:
+  in_channels : 40
+  hidden_channels : 256
+  out_channels : 1
+  num_layers : 3
+  edge_dim : 10
+  num_timesteps : 1
+  dropout : 0.2
