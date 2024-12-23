@@ -10,14 +10,10 @@ import numpy as np
 from sklearn.model_selection import KFold
 
 
-# import warnings
-#
-# warnings.filterwarnings("ignore")
-
 X_train_and_valid = pd.DataFrame(
-    pd.read_excel('../X_train_and_valid.xlsx')).values  # 输入特征
+    pd.read_excel('../X_train_and_valid.xlsx')).values
 y_train_and_valid = pd.DataFrame(
-    pd.read_excel('../y_train_and_valid.xlsx')).values  # 目标变量
+    pd.read_excel('../y_train_and_valid.xlsx')).values
 y_train_and_valid = y_train_and_valid.ravel()
 
 # X_Train, X_Test, y_Train, y_Test = train_test_split(X_train_and_valid, y_train_and_valid, test_size=0.1,
@@ -69,27 +65,27 @@ writer_y_Test.close()
 
 for j in range(1, 6, 1):
     X_train_and_valid = pd.DataFrame(
-        pd.read_excel('../X_train_and_valid.xlsx')).values  # 输入特征
+        pd.read_excel('../X_train_and_valid.xlsx')).values
     y_train_and_valid = pd.DataFrame(
-        pd.read_excel('../y_train_and_valid.xlsx')).values  # 目标变量
+        pd.read_excel('../y_train_and_valid.xlsx')).values
     y_train_and_valid = y_train_and_valid.ravel()
 
     X_SC_1 = pd.DataFrame(
-        pd.read_excel('../X_SC_R_1.xlsx')).values  # 输入特征
+        pd.read_excel('../X_SC_R_1.xlsx')).values
     y_SC_1 = pd.DataFrame(
-        pd.read_excel('../y_SC_R_1.xlsx')).values  # 目标变量
+        pd.read_excel('../y_SC_R_1.xlsx')).values
     y_SC_1 = y_SC_1.ravel()
 
     X_SC_2 = pd.DataFrame(
-        pd.read_excel('../X_SC_R_2.xlsx')).values  # 输入特征
+        pd.read_excel('../X_SC_R_2.xlsx')).values
     y_SC_2 = pd.DataFrame(
-        pd.read_excel('../y_SC_R_2.xlsx')).values  # 目标变量
+        pd.read_excel('../y_SC_R_2.xlsx')).values
     y_SC_2 = y_SC_2.ravel()
 
     X_Drugbank = pd.DataFrame(
-        pd.read_excel('../X_Drugbank_R.xlsx')).values  # 输入特征
+        pd.read_excel('../X_Drugbank_R.xlsx')).values
     y_Drugbank = pd.DataFrame(
-        pd.read_excel('../y_Drugbank_R.xlsx')).values  # 目标变量
+        pd.read_excel('../y_Drugbank_R.xlsx')).values
     y_Drugbank = y_Drugbank.ravel()
 
     scaler = StandardScaler()
@@ -151,6 +147,3 @@ writer_y_fit_SC_2.close()
 writer_y_SC_2.close()
 writer_y_fit_Drugbank.close()
 writer_y_Drugbank.close()
-
-# with open('xgb.pickle', 'wb') as fw:
-#     pickle.dump(model, fw)
