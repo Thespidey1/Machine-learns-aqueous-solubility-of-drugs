@@ -16,17 +16,11 @@ from sklearn.model_selection import KFold
 import lightgbm
 
 
-
-
-
 X_train_and_valid = pd.DataFrame(
     pd.read_excel('../X_train_and_valid.xlsx')).values  
 y_train_and_valid = pd.DataFrame(
     pd.read_excel('../y_train_and_valid.xlsx')).values  
 y_train_and_valid = y_train_and_valid.ravel()
-
-
-
 
 folds = KFold(n_splits=5, shuffle=True)
 i = 1
@@ -45,17 +39,13 @@ for trn_idx, test_idx in folds.split(X_train_and_valid, y_train_and_valid):
     scaler = StandardScaler()
     scaler = scaler.fit(X_Train)
     X_Train = scaler.transform(X_Train)
-    X_Test = scaler.transform(X_Test)
-
+    X_Test = scaler.transform(X_Test) 
     
-    
-
     xgboost = xgb.XGBRegressor(n_estimators=500, max_depth=7, learning_rate=0.07)
     rf = RandomForestRegressor(n_estimators=400, max_depth=50, min_samples_leaf=1, min_samples_split=2)
     svr = svm.SVR(kernel='rbf', C=10, gamma=0.004)
     lgb = lightgbm.LGBMRegressor(n_estimators=3000, max_depth=5, learning_rate=0.07, force_col_wise=True, n_jobs=-1,
                                  verbose=-1, num_leaves=30)
-
     
     model = StackingRegressor(estimators=[('xgb', xgboost), ('rf', rf), ('svr', svr), ('lightgbm', lgb)],
                               final_estimator=Ridge(fit_intercept=False, positive=True, alpha=0.001), n_jobs=-1, cv=5)
@@ -65,8 +55,7 @@ for trn_idx, test_idx in folds.split(X_train_and_valid, y_train_and_valid):
 
     y_fit = pd.DataFrame(y_pred)
     
-    y_test = pd.DataFrame(y_Test)
-    
+    y_test = pd.DataFrame(y_Test)    
 
     MAE = mean_absolute_error(y_Test, y_pred)
     print('MAE：%.4f' % MAE)
