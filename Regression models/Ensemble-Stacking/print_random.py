@@ -3,9 +3,9 @@ import numpy as np
 from sklearn.model_selection import KFold
 
 X_train_and_valid = pd.DataFrame(
-    pd.read_excel('../X_train_and_valid.xlsx')).values  # 输入特征
+    pd.read_excel('../X_train_and_valid.xlsx')).values
 y_train_and_valid = pd.DataFrame(
-    pd.read_excel('../y_train_and_valid.xlsx')).values  # 目标变量
+    pd.read_excel('../y_train_and_valid.xlsx')).values
 y_train_and_valid = y_train_and_valid.ravel()
 i = 1
 writer_random_num = pd.ExcelWriter('random_num.xlsx')
