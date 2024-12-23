@@ -15,14 +15,12 @@ accuracy_SC_1 = accuracy_score(y_SC_1, y_pred_SC_1)
 print('Accuracy_SC_1：%.4f' % accuracy_SC_1)
 n_classes = 7
 
-# 精准率
 if n_classes == 2:
     precision_SC_1 = precision_score(y_SC_1, y_pred_SC_1)
 else:
     precision_SC_1 = precision_score(y_SC_1, y_pred_SC_1, average='macro')
 print('Precision_SC_1：%.4f' % precision_SC_1)
 
-# 召回率
 
 if n_classes == 2:
     recall_SC_1 = recall_score(y_SC_1, y_pred_SC_1)
@@ -30,7 +28,6 @@ else:
     recall_SC_1 = recall_score(y_SC_1, y_pred_SC_1, average='macro')
 print('Recall_SC_1：%.4f' % recall_SC_1)
 
-# F1值
 if n_classes == 2:
     f1_SC_1 = f1_score(y_SC_1, y_pred_SC_1)
 else:
@@ -43,14 +40,12 @@ y_pred_SC_2 = pd.read_excel('ex_class.xlsx', sheet_name=1)
 accuracy_SC_2 = accuracy_score(y_SC_2, y_pred_SC_2)
 print('Accuracy_SC_2：%.4f' % accuracy_SC_2)
 
-# 精准率
 if n_classes == 2:
     precision_SC_2 = precision_score(y_SC_2, y_pred_SC_2)
 else:
     precision_SC_2 = precision_score(y_SC_2, y_pred_SC_2, average='macro')
 print('Precision_SC_2：%.4f' % precision_SC_2)
 
-# 召回率
 
 if n_classes == 2:
     recall_SC_2 = recall_score(y_SC_2, y_pred_SC_2)
@@ -58,7 +53,6 @@ else:
     recall_SC_2 = recall_score(y_SC_2, y_pred_SC_2, average='macro')
 print('Recall_SC_2：%.4f' % recall_SC_2)
 
-# F1值
 if n_classes == 2:
     f1_SC_2 = f1_score(y_SC_2, y_pred_SC_2)
 else:
@@ -71,14 +65,12 @@ y_pred_DrugBank = pd.read_excel('ex_class.xlsx', sheet_name=2)
 accuracy_DrugBank = accuracy_score(y_DrugBank, y_pred_DrugBank)
 print('Accuracy_DrugBank：%.4f' % accuracy_DrugBank)
 
-# 精准率
 if n_classes == 2:
     precision_DrugBank = precision_score(y_DrugBank, y_pred_DrugBank)
 else:
     precision_DrugBank = precision_score(y_DrugBank, y_pred_DrugBank, average='macro')
 print('Precision_DrugBank：%.4f' % precision_DrugBank)
 
-# 召回率
 
 if n_classes == 2:
     recall_DrugBank = recall_score(y_DrugBank, y_pred_DrugBank)
@@ -86,7 +78,6 @@ else:
     recall_DrugBank = recall_score(y_DrugBank, y_pred_DrugBank, average='macro')
 print('Recall_DrugBank：%.4f' % recall_DrugBank)
 
-# F1值
 if n_classes == 2:
     f1_DrugBank = f1_score(y_DrugBank, y_pred_DrugBank)
 else:
@@ -99,14 +90,12 @@ y_pred_all = pd.read_excel('ex_class.xlsx', sheet_name=3)
 accuracy_all = accuracy_score(y_all, y_pred_all)
 print('Accuracy_all：%.4f' % accuracy_all)
 
-# 精准率
 if n_classes == 2:
     precision_all = precision_score(y_all, y_pred_all)
 else:
     precision_all = precision_score(y_all, y_pred_all, average='macro')
 print('Precision_all：%.4f' % precision_all)
 
-# 召回率
 
 if n_classes == 2:
     recall_all = recall_score(y_all, y_pred_all)
@@ -114,7 +103,6 @@ else:
     recall_all = recall_score(y_all, y_pred_all, average='macro')
 print('Recall_all：%.4f' % recall_all)
 
-# F1值
 if n_classes == 2:
     f1_all = f1_score(y_all, y_pred_all)
 else:
