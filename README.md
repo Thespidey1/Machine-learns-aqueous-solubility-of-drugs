@@ -7,7 +7,7 @@ To run the scripts provided in this repository, you'll need the following Python
 
 * Python 3.11+
 * scikit-learn >= 1.3.0
-* * scikit-plot >= 0.3.7
+* scikit-plot >= 0.3.7
 * pandas >= 2.0.3
 * numpy >= 1.24.3
 * matplotlib >= 3.7.2
