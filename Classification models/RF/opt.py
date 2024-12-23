@@ -42,13 +42,9 @@ def model_adjust_parameters(cv_params, other_params):
     for mean, param, std in zip(means, params, std):
         print("mean_score: %f,  params: %r, std: %r" % (mean, param, std))
 
-    print('参数的最佳取值：{0}'.format(optimized_param.best_params_))
+    print('best parameters：{0}'.format(optimized_param.best_params_))
 
-    print('最佳模型得分:{0}'.format(optimized_param.best_score_))
-
-    parameters_score = pd.DataFrame(data=[params, means, std])
-
-    parameters_score.to_excel('./opt_4.xlsx', index=False)
+    print('best score:{0}'.format(optimized_param.best_score_))
 
     print('Optimization finished')
 
