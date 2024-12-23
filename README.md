@@ -22,7 +22,7 @@ To run the scripts provided in this repository, you'll need the following Python
 * torch_geometric >=2.1.0  
 * torch_scatter >=2.0.9
 
-To install required packages, use the command: pip install <package_name>==<version_number>. For example, pip install imbalanced_learn == 0.12.2
+To install required packages, use the command: `pip install <package_name>==<version_number>`. For example, `pip install imbalanced_learn == 0.12.2`
 
 ## Usage
-First, download the entire repository as zip file and unzip it. The datasets and corresponding descriptors are provided in .xlsx format. To train and test the DL models, just run the CV.py file; To train and test statistical ML moldes and their Stakings, run the .py file with the corresponding name. The opt.py files in each directory are for hyperparameter optimization. Metrics_compute_class.py files are used to generate metrics and corresponding figures. Please note that Metrics_compute_class.py should run after training process, in which tables will be generated about training and testing results.
+First, download the entire repository as zip file and unzip it. The datasets and corresponding descriptors are provided in `.xlsx` format. To train and test the DL models, just run the `CV.py` file. If you want to reduce training time, just specify a trained weight in `model_weight` directory. To train and test statistical ML moldes and their Stakings, run the `.py` file with the corresponding name. The `opt.py` files in each directory are for hyperparameter optimization. `Metrics_compute_class.py` files are used to generate metrics and corresponding figures. Please note that `Metrics_compute_class.py` should run after training process, in which tables will be generated about training and testing results.
