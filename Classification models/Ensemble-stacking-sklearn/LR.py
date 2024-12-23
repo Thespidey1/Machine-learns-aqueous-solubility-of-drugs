@@ -16,10 +16,6 @@ import lightgbm
 from sklearn.model_selection import KFold
 import matplotlib as mpl
 
-import warnings
-
-warnings.filterwarnings("ignore")
-
 mpl.rcParams['pdf.fonttype'] = 42
 mpl.rcParams['ps.fonttype'] = 42
 
