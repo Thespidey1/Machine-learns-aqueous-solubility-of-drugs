@@ -16,6 +16,7 @@ To run the scripts provided in this repository, you'll need the following Python
 * scipy >= 1.11.1
 * torch >= 2.2.1+cu121
 * lightgbm >= 4.5.0
+* xgboost >= 1.7.6
 * tqdm >= 4.65.0
 * networkx >=3.1  
 * PyYAML >=6.0.1  
