@@ -1,6 +1,6 @@
 # Machine learning for drug aqueous solubility prediction
 
-This repository contains the code and data used in "Machine learns aqueous solubility of drugs". The codes for descriptor generation, hyperparameter optimization, model training, and model testing are included for both regression and classification tasks of solubility prediction. Four base learners (RF, XGB, LightGBM, and SVM) as well as their Stackings, and two DL adcanced models (Transfoprmer-CNN and GNN) are presented.
+This repository contains the code and data used in "Rethinking the AI Paradigm for Pharmaceutical Solubility Prediction with Dual-Perspective Modeling and Experimental Validation". The codes for descriptor generation, hyperparameter optimization, model training, and model testing are included for both regression and classification tasks of solubility prediction. Four base learners (RF, XGB, LightGBM, and SVM) as well as their Stackings, and two DL adcanced models (Transfoprmer-CNN and GNN) are presented.
 
 ## Requirements for Environments
 To run the scripts provided in this repository, you'll need the following Python libraries:
